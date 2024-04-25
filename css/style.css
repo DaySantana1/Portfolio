@@ -73,6 +73,50 @@ nav{
     font-size: 15px;
     cursor: pointer;
 }
+
+a {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  a:before, a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    background: #fff;
+  }
+  
+  a:before {
+    left: 0;
+  }
+  a:after {
+    right: 0;
+    background:linear-gradient(80deg, #87ff8b, #d5b5ff);
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  a:hover:before {
+    background: linear-gradient(80deg, #87ff8b, #d5b5ff);
+    width: 110%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  a:hover:after {
+    background: transparent;
+    width: 110%;
+    transition: 0s;
+  }
+
 .nav-list button{
     padding: 10px 20px;
     margin: 0 20px;
@@ -100,10 +144,7 @@ nav{
     color: #ebe7e7;
 }
 #details h1{
-    font-size: 70px;
-    text-align: center;
-    line-height: 0px;
-    text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+    font-size: 2rem;
 }
 #details span{
     background-color: transparent;

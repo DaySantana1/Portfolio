@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-     <script
-      src="https://kit.fontawesome.com/ba57058827.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Animated Aurora Gradient</title>
-  </head>
-  <body>
-      <section id="up"></section>
-      <section id="down"></section>
-      <section id="left"></section>
-      <section id="right"></section>
 
-      <nav>
-        <div class="logo"><h1>Logo.</h1></div>
-        <ul class="nav-list">
-          <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Contato</a></li>
-          <button>CV</button>
-        </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <section id="details">
-        <small></small>
-        <h1>Olá,<br>
-          Sou Dayane Santana
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Ad, architecto! Dolorem totam alias rem laborum, 
-          itaque nostrum obcaecati dolore, consequatur perferendis 
-          odit est expedita at quaerat iste voluptas animi earum?
-        </p>
-      </section>
-         
-  </body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://kit.fontawesome.com/ba57058827.js" crossorigin="anonymous"></script>
+  <title>Dayane Santana</title>
+</head>
+
+<body>
+  <!-- <section id="up"></section>
+  <section id="down"></section>
+  <section id="left"></section>
+  <section id="right"></section> -->
+
+
+  <nav>
+    <div class="logo">
+      <a href="#home"><img src="./images/logo.svg" alt="Logo" /></a>
+    </div>
+
+    <!-- <i class="fa-solid fa-bars" id="menu"></i> -->
+
+    <ul class="nav-list">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Projetos</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#"><i class="fa-brands fa-github-alt"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-square-behance"></i></a></li>
+      <button>Currículo <i class="fa-solid fa-cloud-arrow-down"></i></button>
+    </ul>
+  </nav>
+
+  <section class="home" id="home">
+    <div class="blob"></div>
+    <div class="home-content">
+      
+      <h3>Olá<br></h3>
+        <h1>Sou <span>Dayane Santana</span></h1>
+      
+
+        <h2>
+          <div href="" class="typewrite" data-period="2000" data-type='[ "Web Designer", "UX Designer", "UI Designer", "Web Designer", "Product Designer" ]'>
+            <span class="wrap"></span>
+          </div>
+        </h2>
+
+      <a href="#" class="btn">Entre em contato!  </a>
+
+    </div>
+  </section>
+
+  <section class="services" id="services">
+      <div class="content-wrapper">
+        <div class="content-reading">
+          <h2 class="about-title">Bem-vindo ao meu portfólio</h2>
+          <p>Meu nome é Dayane Santana e sou uma designer de produtos UX/UI iniciante. Sou apaixonada por criar experiências digitais incríveis que atendam às necessidades dos usuários.</p>
+          <a href="#" class="btn">Entre em contato!</a>
+        </div>
+        <div class="image-about">
+          <img src="./images/AVATAR.svg">
+        </div>
+    
+  
+    </section>
+
+    
+
+  </section>
+  
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>

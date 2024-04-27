@@ -181,6 +181,7 @@ li a {
     color: #fff;
     font-weight: 400;
     text-decoration: none;
+    
 }
 
 li a:hover {
@@ -325,10 +326,19 @@ a.btn:hover {
     display: flex;
     justify-content: space-between;
     align-items: center; /* Alinha os itens verticalmente ao centro */
+    
 }
 
 .services .content-reading {
     flex: 1;
+}
+
+.skills-title{
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+    padding-top: 3rem ;
 }
 
 
@@ -350,7 +360,7 @@ a.btn:hover {
     width: 350px;
     max-width: 100%;
     height: 300px;
-    background: #FFF;
+    background: #ffffff8a;
     border-radius: 20px;
     transition: 0.5s;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
@@ -449,7 +459,7 @@ a.btn:hover {
 
 
 .content-reading p {
-    width: 75%;
+    width: 60%;
     margin: 2rem 0;
     color: #fff;
 }
@@ -469,6 +479,8 @@ a.btn:hover {
     box-shadow: 0 0 25px var(--roxo-vibrante);
     border-radius: 100%;
 }
+
+
 
 
 

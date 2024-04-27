@@ -23,63 +23,136 @@
   <section id="left"></section>
   <section id="right"></section> -->
 
+  <div id="dots">
+    <span class="dot" data-target="home"></span>
+    <span class="dot" data-target="services"></span>
+    <span class="dot" data-target="projects"></span>
+    <span class="dot" data-target="contato"></span>
+  </div>
 
-  <nav>
+  <nav class="nav">
     <div class="logo">
-      <a href="#home"><img src="./images/logo.svg" alt="Logo" /></a>
+        <a href="#home"><img src="./images/logo.svg" alt="Logo"></a>
     </div>
-
-    <!-- <i class="fa-solid fa-bars" id="menu"></i> -->
-
+    <i class="fa-solid fa-bars" id="menu"></i>
     <ul class="nav-list">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Projetos</a></li>
-      <li><a href="#">Contato</a></li>
-      <li><a href="#"><i class="fa-brands fa-github-alt"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-square-behance"></i></a></li>
-      <button>Currículo <i class="fa-solid fa-cloud-arrow-down"></i></button>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#"><i class="fa-brands fa-github-alt"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-square-behance"></i></a></li>
+        <li><button>Currículo <i class="fa-solid fa-cloud-arrow-down"></i></button></li>
     </ul>
-  </nav>
+</nav>
+
+
+
 
   <section class="home" id="home">
     <div class="blob"></div>
     <div class="home-content">
-      
+
       <h3>Olá<br></h3>
-        <h1>Sou <span>Dayane Santana</span></h1>
-      
+      <h1>Sou <span>Dayane Santana</span></h1>
 
-        <h2>
-          <div href="" class="typewrite" data-period="2000" data-type='[ "Web Designer", "UX Designer", "UI Designer", "Web Designer", "Product Designer" ]'>
-            <span class="wrap"></span>
-          </div>
-        </h2>
 
-      <a href="#" class="btn">Entre em contato!  </a>
+      <h2>
+        <div href="" class="typewrite" data-period="2000"
+          data-type='[ "Web Designer", "UX Designer", "UI Designer", "Web Designer", "Product Designer" ]'>
+          <span class="wrap"></span>
+        </div>
+      </h2>
+
+      <a href="#" class="btn">Entre em contato! </a>
+
+      <div class="scrolldown" data-gw-scrollto="#media" data-gw-scrollto-offset="-60">
+        <div class="scrolldown__arrows">
+          <div class="scrolldown__arrow scrolldown__arrow_1"></div>
+          <div class="scrolldown__arrow scrolldown__arrow_2"></div>
+          <div class="scrolldown__arrow scrolldown__arrow_3"></div>
+        </div>
+      </div>
 
     </div>
+
+
   </section>
 
   <section class="services" id="services">
-      <div class="content-wrapper">
+    <div class="content-wrapper">
         <div class="content-reading">
-          <h2 class="about-title">Bem-vindo ao meu portfólio</h2>
-          <p>Meu nome é Dayane Santana e sou uma designer de produtos UX/UI iniciante. Sou apaixonada por criar experiências digitais incríveis que atendam às necessidades dos usuários.</p>
-          <a href="#" class="btn">Entre em contato!</a>
+            <h2 class="about-title">Bem-vindo ao meu portfólio</h2>
+            <p>Meu nome é Dayane Santana e sou uma designer de produtos UX/UI iniciante. Sou apaixonada por criar
+                experiências digitais incríveis que atendam às necessidades dos usuários.</p>
+            <a href="#" class="btn">Entre em contato!</a>
         </div>
         <div class="image-about">
-          <img src="./images/AVATAR.svg">
+            <img src="./images/AVATAR.svg">
         </div>
-    
-  
-    </section>
+    </div>
 
-    
+    <div class="container">
+      <div class="card" style="--clr: #009688">
+          <div class="img-box">
+              <img src="https://i.postimg.cc/t4w95jsf/img-01.png">
+          </div>
+          <div class="content">
+              <h2>Leafs</h2>
+              <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Architecto, hic? Magnam eum error saepe doloribus corrupti
+                  repellat quisquam alias doloremque!
+              </p>
+              <a href="">Read More</a>
+          </div>
+      </div>
+      <div class="card" style="--clr: #FF3E7F">
+          <div class="img-box">
+              <img src="https://i.postimg.cc/pdjRc68d/img-02.png">
+          </div>
+          <div class="content">
+              <h2>Fruits</h2>
+              <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Architecto, hic? Magnam eum error saepe doloribus corrupti
+                  repellat quisquam alias doloremque!
+              </p>
+              <a href="">Read More</a>
+          </div>
+      </div>
+      <div class="card" style="--clr: #03A9F4">
+          <div class="img-box">
+              <img src="https://i.postimg.cc/wvDr345G/img-37.png">
+          </div>
+          <div class="content">
+              <h2>Flowers</h2>
+              <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Architecto, hic? Magnam eum error saepe doloribus corrupti
+                  repellat quisquam alias doloremque!
+              </p>
+              <a href="">Read More</a>
+          </div>
+      </div>
+  </div>
+    </div>
+
+    </div>
+</section>
+
+  <section class="projects" id="projects">
 
   </section>
-  
+
+  <section class="contato" id="contato">
+    
+  </section>
+
+
+  </section>
+
 
   <script src="js/script.js"></script>
 </body>

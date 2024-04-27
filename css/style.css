@@ -26,45 +26,61 @@ a {
     --white: #fff;
 }
 
+#dots {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex; /* Adiciona display flex */
+    flex-direction: column; /* Alinha os dots à direita */
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px var(--white) solid;
+    margin: 5px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--roxo-vibrante);
+    border: 2px transparent solid;
+}
+
 /* Gradientes e animações */
-#up {
-    position: absolute;
-    height: 800px;
-    width: 800px;
-    border-radius: 50%;
-    background-image: linear-gradient(80deg, #3a0a67, #c1ebc2);
-    filter: blur(80px);
-    animation: down 15s infinite;
-}
-
-#down {
-    position: absolute;
-    right: 0;
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    background-image: linear-gradient(80deg, #9747ff, #c1ebc2);
-    filter: blur(80px);
-    animation: up 15s infinite;
-}
-
-#left {
-    position: absolute;
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    background-image: linear-gradient(80deg, #9747ff, #8ad88c);
-    filter: blur(80px);
-    animation: left 15s 3s infinite;
-}
-
+#up,
+#down,
+#left,
 #right {
     position: absolute;
     height: 500px;
     width: 500px;
     border-radius: 50%;
-    background-image: linear-gradient(80deg, #87ff8b, #9747ff);
     filter: blur(80px);
+}
+
+#up {
+    background-image: linear-gradient(80deg, #3a0a67, #c1ebc2);
+    animation: down 15s infinite;
+}
+
+#down {
+    right: 0;
+    background-image: linear-gradient(80deg, #9747ff, #c1ebc2);
+    animation: up 15s infinite;
+}
+
+#left {
+    background-image: linear-gradient(80deg, #9747ff, #8ad88c);
+    animation: left 15s 3s infinite;
+}
+
+#right {
+    background-image: linear-gradient(80deg, #87ff8b, #9747ff);
     animation: right 20s .1s infinite;
 }
 
@@ -87,8 +103,7 @@ a {
 }
 
 /* Navbar */
-nav {
-    /* Add this line to set the z-index value */
+.nav {
     z-index: 1001;
     padding: 1rem 0;
     display: flex;
@@ -98,14 +113,28 @@ nav {
     backdrop-filter: blur(5px);
     background-color: #9747ff11;
     color: #fff;
-    position: fixed; /* Add this line to make the nav fixed at the top */
-    width: 100%; /* Add this line to make the nav full width */
-  }
-  
+    position: fixed;
+    width: 100%;
+    transition: transform 0.3s ease; /* Transição suave para a animação */
+    top: 0;
+    left: 0;
+}
+
+.nav.open {
+    transform: translateY(0); /* Move o menu para a posição visível */
+}
+
+.nav.closed {
+    transform: translateY(-100%); /* Move o menu para fora da tela */
+}
+
+#menu {
+    cursor: pointer;
+}
 
 .logo {
     cursor: pointer;
-    padding:0 2rem;
+    padding: 0 2rem;
     transition: 0.3s ease;
 }
 
@@ -203,7 +232,7 @@ li a:hover:after {
     border-radius: 0.3rem;
 }
 
-.nav-list button i{
+.nav-list button i {
     font-size: 1rem;
 }
 
@@ -214,7 +243,9 @@ li a:hover:after {
 }
 
 section {
+    padding: 5rem; /* 0 no topo e na base, 4.063rem nas laterais */
     min-height: 100vh;
+    background-color: #000;
 }
 
 /* Estilos específicos da seção home */
@@ -227,8 +258,7 @@ section.home {
     align-items: center;
     z-index: 999;
     min-height: 100vh;
-    background-color: #000;
-  }
+}
 
 .home-content h1 {
     margin: 0.5rem 0;
@@ -287,31 +317,144 @@ a.btn:hover {
 }
 
 .services {
-    padding: 0 4.063rem; /* 0 no topo e na base, 4.063rem nas laterais */
     justify-content: center;
     align-items: center;
-    background-color: #000;
-    display: flex;
-  }
-  
-  
+}
+
 .services .content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center; /* Alinha os itens verticalmente ao centro */
-  }
-  
-  .services .content-reading {
-    flex: 1;
-  }
+}
 
-.content-reading p{
+.services .content-reading {
+    flex: 1;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: #FFF;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container .card:hover {
+    height: 400px;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.container .card .content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container .card .content p {
+    color: #333;
+}
+
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: #FFF;
+    font-weight: 500;
+}
+
+.container .card .content a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+}
+
+
+.content-reading p {
     width: 75%;
     margin: 2rem 0;
     color: #fff;
 }
 
-.content-reading h2{
+.content-reading h2 {
     color: #fff;
     font-weight: 500;
     font-size: 2rem;
@@ -320,12 +463,14 @@ a.btn:hover {
 .image-about img {
     width: 20rem; /* Defina o tamanho desejado para a largura da imagem */
     height: auto; /* Mantenha a proporção da altura conforme a largura */
-  }
+}
 
-  .image-about img:hover{
+.image-about img:hover {
     box-shadow: 0 0 25px var(--roxo-vibrante);
     border-radius: 100%;
-  }
+}
+
+
 
 @keyframes down {
     0%, 100% {

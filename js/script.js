@@ -66,3 +66,36 @@ document.addEventListener('mousemove', function(e){
   var y = e.clientY;
   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
 });
+
+// Adicione isso após o final do seu script.js
+document.addEventListener("DOMContentLoaded", function() {
+    var dots = document.querySelectorAll('.dot');
+  
+    window.addEventListener('scroll', function() {
+      var sections = document.querySelectorAll('section');
+      var current = '';
+      sections.forEach(function(section) {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+          current = section.getAttribute('id');
+        }
+      });
+  
+      dots.forEach(function(dot) {
+        dot.classList.remove('active');
+        if (current === dot.getAttribute('data-target')) {
+          dot.classList.add('active');
+        }
+      });
+    });
+  
+    dots.forEach(function(dot, index) {
+      dot.addEventListener('click', function() {
+        window.scrollTo({
+          top: document.getElementById(dot.getAttribute('data-target')).offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });

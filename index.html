@@ -3,108 +3,105 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-
-
-  <link rel="stylesheet" href="/css/style.css" />
-  <script src="https://kit.fontawesome.com/ba57058827.js" crossorigin="anonymous"></script>
-  <title>Dayane Santana</title>
+  <link rel="stylesheet" href="/src/style.css" />
 </head>
 
 <body>
-  <!-- <section id="up"></section>
-  <section id="down"></section>
-  <section id="left"></section>
-  <section id="right"></section> -->
-<!-- 
-  <div id="dots">
-    <span class="dot" data-target="home"></span>
-    <span class="dot" data-target="services"></span>
-    <span class="dot" data-target="projects"></span>
-    <span class="dot" data-target="contato"></span>
-  </div> -->
 
 
-  
   <nav class="nav">
     <div class="logo">
-        <a href="#home"><img src="./images/logo.svg" alt="Logo"></a>
+      <a href="#home"><img src="./images/logo.svg" alt="Logo"></a>
     </div>
     <i class="fa-solid fa-bars" id="menu"></i>
     <ul class="nav-list">
-        <li><a href="#" class="active" data-target="home">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><a href="#"><i class="fa-brands fa-github-alt"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-square-behance"></i></a></li>
-        <li><button>Currículo <i class="fa-solid fa-cloud-arrow-down"></i></button></li>
+      <li><a href="#" class="active" data-target="home">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Projetos</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#"><i class="fa-brands fa-github-alt"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-square-behance"></i></a></li>
+      <li><button>Currículo <i class="fa-solid fa-cloud-arrow-down"></i></button></li>
     </ul>
-</nav>
+  </nav>
 
+  <div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="interactive"></div>
+    </div>
+  </div>
 
-
-<div>
-  <div class="scroll-indicator" id="home" data-scroll-indicator-title="Início"></div>
-</div>
+  <div>
+    <div class="scroll-indicator" id="home" data-scroll-indicator-title="Início"></div>
+  </div>
 
   <section class="home" id="home">
-    <div class="blob"></div>
-    <span class="background">
-      <div class="home-content">
 
-        <h3>Olá<br></h3>
-        <h1>Sou <span>Dayane Santana</span></h1>
-  
-  
-        <h2>
-          <div href="" class="typewrite" data-period="2000"
-            data-type='[ "Web Designer", "UX Designer", "UI Designer", "Web Designer", "Product Designer" ]'>
-            <span class="wrap"></span>
-          </div>
-        </h2>
-  
-        <a href="#" class="btn">Entre em contato! </a>
-  
-      </div>
+    <div class="home-content">
 
-      <div class="vector-image">
-        <img src="./images/Vector1.svg" alt="">
-      </div>
-    </span>
+      <h3>Olá<br></h3>
+      <h1>Sou <span>Dayane Santana</span></h1>
 
+
+      <h2>
+        <div href="" class="typewrite" data-period="2000"
+          data-type='[ "Web Designer", "UX Designer", "UI Designer", "Web Designer", "Product Designer" ]'>
+          <span class="wrap"></span>
+        </div>
+      </h2>
+
+      <a href="#" class="btn">Entre em contato! </a>
+
+    </div>
+
+    <div class="vector-image">
+      <img src="./images/Vector1.svg" alt="">
+    </div>
 
   </section>
 
   <div>
-      <div class="scroll-indicator" id="services" data-scroll-indicator-title="Sobre Mim"></div>
-    </div>
+    <div class="scroll-indicator" id="services" data-scroll-indicator-title="Sobre Mim"></div>
+  </div>
 
   <section class="services" id="services">
-
-
     <div class="content-wrapper">
-        <div class="content-reading">
-            <h2 class="about-title">Bem-vindo ao meu <span >
-              <div href="" class="typewrite" data-period="2000"
-              data-type='[  "Portfólio" ]'>
+      <div class="content-reading">
+        <h2 class="about-title">Bem-vindo ao meu <span>
+            <div href="" class="typewrite" data-period="2000" data-type='[  "Portfólio" ]'>
               <span class="wrap"></span>
             </div>
-            </span></h2>
-            <p>Meu nome é Dayane Santana e sou uma designer de produtos UX/UI iniciante. Sou apaixonada por criar
-                experiências digitais incríveis que atendam às necessidades dos usuários.</p>
-            <a href="#" class="btn">Entre em contato!</a>
-        </div>
-        <div class="image-about">
-            <img src="./images/AVATAR.svg">
-        </div>
+          </span></h2>
+        <p>Meu nome é Dayane Santana e sou uma designer de produtos UX/UI iniciante. Sou apaixonada por criar
+          experiências digitais incríveis que atendam às necessidades dos usuários.</p>
+        <a href="#" class="btn">Entre em contato!</a>
+      </div>
+      <div class="image-about">
+        <img src="./images/AVATAR.svg">
+      </div>
     </div>
 
     <!-- <h2 class="skills-title">Conheça minhas Habilidades</h2>
@@ -171,42 +168,35 @@
 
     </div> -->
 
-   
+  </section>
 
-<div>
-  <div class="scroll-indicator" id="projects" data-scroll-indicator-title="Projetos"></div>
-</div>
+    <div>
+      <div class="scroll-indicator" id="projects" data-scroll-indicator-title="Projetos"></div>
+    </div>
 
-  <section class="projects" id="projects">
+    <section class="projects" id="projects">
 
-    <h2 class="projects-title">Meus projetos</h2>
+      <h2 class="projects-title">Meus projetos</h2>
 
       <div class="firstprojects">
         <img src="images/7337530.jpg" alt="Descrição da imagem">
       </div>
 
+      <video autoplay>
+        <source src="./images/16002_x264.mp4" type="video/mp4">
+      </video>
 
-      
+    </section>
 
-    <video autoplay> 
-      <source src="./images/16002_x264.mp4" type="video/mp4">
-  </video>
-
-  </section>
-
-  <div>
-    <div class="scroll-indicator" id="contato" data-scroll-indicator-title="Entre em Contato"></div>
-  </div>
-
-  <section class="contato" id="contato">
     
-  </section>
 
-
-  </section>
-
-
+    <section class="contato" id="contato">
+      <div>
+        <div class="scroll-indicator" id="contato" data-scroll-indicator-title="Entre em Contato"></div>
+      </div>
+    </section>
   <script src="js/script.js"></script>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>

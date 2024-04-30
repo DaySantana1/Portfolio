@@ -9,12 +9,18 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <script
+      src="https://kit.fontawesome.com/ba57058827.js"
+      crossorigin="anonymous"
+    ></script>
+
   <link rel="stylesheet" href="/src/style.css" />
 </head>
 
 <body>
+
 
 
   <nav class="nav">
@@ -23,14 +29,14 @@
     </div>
     <i class="fa-solid fa-bars" id="menu"></i>
     <ul class="nav-list">
-      <li><a href="#" class="active" data-target="home">Home</a></li>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Projetos</a></li>
-      <li><a href="#">Contato</a></li>
-      <li><a href="#"><i class="fa-brands fa-github-alt"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-      <li><a href="#"><i class="fa-brands fa-square-behance"></i></a></li>
-      <li><button>Currículo <i class="fa-solid fa-cloud-arrow-down"></i></button></li>
+      <li><a href="#home" class="active" data-target="home">Home</a></li>
+      <li><a href="#services">Sobre</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="https://github.com/DaySantana1" target="_blank"><i class="fa-brands fa-github-alt"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/dayane-santana-465b541a3/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a href="https://www.behance.net/dayanesantana6" target="_blank"><i class="fa-brands fa-square-behance"></i></a></li>
+      <li><button><a href="./cv/Currículo Dayane Santana.pdf " target="_blank">Currículo <i class="fa-solid fa-cloud-arrow-down"></i></a></button></li>
     </ul>
   </nav>
 
@@ -73,7 +79,7 @@
         </div>
       </h2>
 
-      <a href="#" class="btn">Entre em contato! </a>
+      <a href="#" class="btn">Entre em contato! <i class="fa-solid fa-chevron-right"></i> </a>
 
     </div>
 
@@ -170,31 +176,39 @@
 
   </section>
 
-    <div>
-      <div class="scroll-indicator" id="projects" data-scroll-indicator-title="Projetos"></div>
+  <div>
+    <div class="scroll-indicator" id="projects" data-scroll-indicator-title="Projetos"></div>
+  </div>
+
+  <section class="projects" id="projects">
+
+    <h2 class="projects-title">Meus projetos</h2>
+
+    <div class="firstprojects">
+      <img src="images/7337530.jpg" alt="Descrição da imagem">
     </div>
 
-    <section class="projects" id="projects">
+    <div class="firstprojects">
+      <img src="images/7337530.jpg" alt="Descrição da imagem">
+    </div>
 
-      <h2 class="projects-title">Meus projetos</h2>
+    <div class="firstprojects">
+      <img src="images/7337530.jpg" alt="Descrição da imagem">
+    </div>
 
-      <div class="firstprojects">
-        <img src="images/7337530.jpg" alt="Descrição da imagem">
-      </div>
+    <video autoplay>
+      <source src="./images/16002_x264.mp4" type="video/mp4">
+    </video>
 
-      <video autoplay>
-        <source src="./images/16002_x264.mp4" type="video/mp4">
-      </video>
+  </section>
 
-    </section>
 
-    
 
-    <section class="contato" id="contato">
-      <div>
-        <div class="scroll-indicator" id="contato" data-scroll-indicator-title="Entre em Contato"></div>
-      </div>
-    </section>
+  <section class="contato" id="contato">
+    <div>
+      <div class="scroll-indicator" id="contato" data-scroll-indicator-title="Entre em Contato"></div>
+    </div>
+  </section>
   <script src="js/script.js"></script>
   <script type="module" src="/src/main.ts"></script>
 </body>

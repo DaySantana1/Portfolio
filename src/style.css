@@ -21,7 +21,7 @@ a {
 
 /* Root Variables */
 :root {
-    --roxo-escuro: #38026b;
+    --roxo-escuro: #3a0070;
     --roxo-vibrante: #9747ff;
     --verde-claro: rgb(193, 235, 194);
     --verde-opaco: #8ad88c;
@@ -575,10 +575,46 @@ a.btn:hover {
 
 /* Services Section */
 .services {
+    position: relative; /* Adiciona posição relativa para que a posição absoluta funcione dentro */
     padding: 0 5rem;
     justify-content: center;
     min-height: 100vh;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+/* Move the .vector-image-3 only to the "services" section */
+
+.vector-image-3 {
+    position: absolute; /* Altera a posição para absoluta */
+    top: 5rem; /* Ajusta a distância do topo conforme necessário */
+    right: 3rem; /* Ajusta a distância da direita conforme necessário */
+
+    height: auto;
+   
+}
+
+.vector-image-3 img {
+    width: 3rem;
+}
+
+.vector-image-2 {
+    position: absolute; /* Altera a posição para absoluta */
+    
+
+    bottom: 3rem;
+    /* Margem de 3rem a partir do fundo */
+    left: 3rem;
+    /* Margem de 3rem da borda esquerda */
+
+    /* Defina a largura máxima conforme necessário */
+    height: auto;
+
+}
+
+.vector-image-2 img {
+    
+    width: 2.5rem;
 }
 
 .services .content-wrapper {
@@ -605,120 +641,7 @@ a.btn:hover {
     text-align: center;
 }
 
-.card-section {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 3rem 0;
-}
 
-.card-section .card {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 15rem;
-    max-width: 100%;
-    height: 15rem;
-    background: #ffffff8a;
-    border-radius: 20px;
-    transition: 0.5s;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
-}
-
-.card-section .card:hover {
-    height: 400px;
-}
-
-.card-section .card .img-box {
-    position: absolute;
-    top: 1rem;
-    width: 100px;
-    height: 100px;
-    background: #333;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 0.5s;
-}
-
-.card-section .card:hover .img-box {
-    top: -50px;
-    scale: 0.75;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
-}
-
-.card-section .card .img-box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-section .card .content {
-    position: absolute;
-    top: 12rem;
-    width: 100%;
-    height: 35px;
-    padding: 0 3rem;
-    text-align: center;
-    overflow: hidden;
-    transition: 0.5s;
-}
-
-.card-section .card:hover .content {
-    top: 130px;
-    height: 250px;
-}
-
-.card-section .card .content h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--clr);
-}
-
-.card-section .card .content p {
-    color: #333;
-}
-
-.card-section .card .content a {
-    position: relative;
-    top: 15px;
-    display: inline-block;
-    padding: 12px 25px;
-    text-decoration: none;
-    background: var(--clr);
-    color: #FFF;
-    font-weight: 500;
-}
-
-.card-section .card .content a:hover {
-    opacity: 0.8;
-}
-
-/* Media Queries */
-@media (max-width: 480px) {
-    .container .card {
-        width: 230px;
-        border-radius: 15px;
-    }
-
-    .container .card .img-box {
-        width: 185px;
-        border-radius: 10px;
-    }
-
-    .container .card .content p {
-        font-size: 0.8rem;
-    }
-
-    .container .card .content a {
-        font-size: 0.9rem;
-    }
-}
 
 /* Content Reading */
 .content-reading p {
@@ -812,6 +735,14 @@ a.btn:hover {
     overflow: hidden;
   }
   
+  .show-more {
+    cursor: pointer;
+    color: #607186;
+    display: block;
+   background-color:linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100% );
+  }
+
+
   .content .content-overlay {
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
@@ -876,6 +807,71 @@ a.btn:hover {
     width: 100%;
 
 }
+
+.minimize-overview
+{
+    padding-bottom: 24px;
+}
+.hide-minimize-content
+{
+    overflow: hidden;
+    height: 81px;
+}
+.show-minimize-content
+{
+    overflow: auto;
+    overflow-y: hidden;
+    height: auto;
+}
+.minimize-overview-text {
+    font-family: 'Lato', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: left;
+    padding-left: 14px;
+}
+.minimize-overview-gradient
+{
+    position: relative;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.hide-minimize-gradient
+{
+    height: 0px;
+    margin-top: 0px;
+}
+.show-minimize-gradient
+{
+    height: 27px;
+    margin-top: -27px;
+}
+
+.more-about-minimize-link
+{
+    text-align: left;
+    padding-bottom: 33px;
+}
+.more-about-minimize-text {
+    font-family: 'Lato', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #008BAA;
+    text-align: left;
+    padding-left: 14px;
+    display: inline-block;
+}
+.more-about-minimize-text:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.more-about-minimize-arrow
+{
+    display: inline-block;
+}
+
 
 .contato{
     min-height: 100vh;

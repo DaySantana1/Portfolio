@@ -931,28 +931,30 @@ a.btn:hover {
 
 .projects video {
     width: 100%;
-
 }
-
 
 footer.contato{
     height: 100vh;
     background-color: var(--black);
     align-items: center;
     justify-content: center;
-    display: flex;
-    flex-direction: row;
     color: var(--white);
+    padding:0 5rem;
+}
+
+.footer-content{
+    align-items: center;
+    padding-top: 5rem;
+
 }
 
 .footer-section{
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 200px;
     display: flex;
     flex-direction: row;
     padding: 1rem 0;
-
-    
 }
 
 .contact-section{
@@ -988,11 +990,13 @@ footer.contato{
 .image-footer img:hover {
     box-shadow: 0 0 25px var(--roxo-vibrante);
     border-radius: 100%;
+    transition: 0.5s ease;
 }
 
 .line-1 {
     height: 1px;
     background: var(--white);
+    align-items: center;
   }
 
 .footer-section-bt{
@@ -1014,6 +1018,22 @@ footer.contato{
     transition: 0.5s ease;
 }
 
+.cta h3{
+    color: var(--verde-claro);
+}
+
+.cta i{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.cta i:hover{
+    color: var(--roxo-vibrante);
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
 .footer-image-bt img{
     padding: 0.5rem 0;
+    width: 7rem;
 }

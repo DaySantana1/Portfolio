@@ -683,7 +683,7 @@ a.btn:hover {
 .services-page{
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -738,10 +738,18 @@ a.btn:hover {
     transition: 0.5s ease;
 }
 
-.services-box:hover {
+.services-box:hover{
     background-color: var(--white);
     color: var(--black); /* Adicionando a cor do texto no hover */
     transform: scale(1.05);
+}
+
+.services-box h3:hover{
+    color: var(--black); /* Adicionando a cor do texto no hover */
+}
+
+.services-box p:hover{
+    color: var(--black); /* Adicionando a cor do texto no hover */
 }
 
 
@@ -933,13 +941,16 @@ a.btn:hover {
     width: 100%;
 }
 
-footer.contato{
+.certifications{
     height: 100vh;
-    background-color: var(--black);
+}
+
+footer.contato{
+    background: linear-gradient(53deg,  #38026b, #5e199f,  #8ad88c);
     align-items: center;
     justify-content: center;
     color: var(--white);
-    padding:0 5rem;
+    padding:0 7rem;
 }
 
 .footer-content{
@@ -954,8 +965,8 @@ footer.contato{
     gap: 200px;
     display: flex;
     flex-direction: row;
-    padding: 1rem 0;
 }
+
 
 .contact-section{
     padding: 1rem 0;
@@ -1013,7 +1024,7 @@ footer.contato{
 }
 
 .socials-footer a i:hover{
-    color: var(--roxo-vibrante);
+    color: var(--rosa);
     transform: scale(1.2);
     transition: 0.5s ease;
 }
@@ -1028,7 +1039,7 @@ footer.contato{
 }
 
 .cta i:hover{
-    color: var(--roxo-vibrante);
+    color: var(--rosa);
     transform: scale(1.2);
     transition: 0.5s ease;
 }

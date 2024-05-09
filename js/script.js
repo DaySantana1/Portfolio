@@ -330,6 +330,3 @@ let options = {
   $(".react .bar").circleProgress({
     value: 0.60
   });
-setTimeout(()=>{
-window.open("https://medium.com/@nitinmaurya969543")
-},5000)

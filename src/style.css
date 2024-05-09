@@ -168,6 +168,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 
 
@@ -683,7 +684,9 @@ a.btn:hover {
 .services-page{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -739,24 +742,13 @@ a.btn:hover {
 }
 
 .services-box:hover{
-    background-color: var(--white);
-    color: var(--black); /* Adicionando a cor do texto no hover */
+    background-color: var(--roxo-opaco);
+    color: var(--black) !important; /* Adicionando a cor do texto no hover */
     transform: scale(1.05);
 }
 
-.services-box h3:hover{
-    color: var(--black); /* Adicionando a cor do texto no hover */
-}
-
-.services-box p:hover{
-    color: var(--black); /* Adicionando a cor do texto no hover */
-}
-
-
 .services-box i{
-
     text-align: start;
-    color: var(--black);
 }
 
 @media (max-width: 768px) {
@@ -944,6 +936,99 @@ a.btn:hover {
 .certifications{
     height: 100vh;
 }
+
+.skillcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: black;
+    height: 100vh;
+  }
+
+  .skillcontainer .wrapper{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .skillcontainer .wrapper .card{
+    background: #262626;
+    width: calc(33% - 20px);
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  }
+  .wrapper .card:hover{
+    background-color: var(--cinza);
+    color: black;
+    transform: translateY(-14px);
+    transition: background 1s, color 1s, transform 0.5s;
+  }
+  .skillcontainer .wrapper .card .circle{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    cursor: default;
+  }
+  .skillcontainer .card .circle .box,
+  .skillcontainer .card .circle .box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .skillcontainer .card .circle .box{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: all 0.2s;
+  }
+  
+  .skillcontainer .card .circle .box span,
+  .skillcontainer .wrapper .card .text{
+    background: -webkit-linear-gradient(left, var(--roxo-vibrante), var(--rosa));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .skillcontainer .circle .box span{
+    font-size: 38px;
+    font-family: sans-serif;
+    font-weight: 600;
+    transform: translate(-45%, -45%);
+    transition: all 0.1s;
+  }
+  .skillcontainer .card .circle:hover .box span{
+    transform: translate(-45%, -45%) scale(1.09);
+  }
+  .skillcontainer .card .text{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  @media(max-width: 753px){
+    .skillcontainer .wrapper{
+      max-width: 700px;
+    }
+    .skillcontainer  .wrapper .card{
+      width: calc(50% - 20px);
+      margin-bottom: 20px;
+    }
+  }
+  @media(max-width: 505px){
+    .skillcontainer .wrapper{
+      max-width: 500px;
+    }
+    .skillcontainer .wrapper .card{
+      width: 100%;
+    }
+  }
+
 
 footer.contato{
     background: linear-gradient(53deg,  #38026b, #5e199f,  #8ad88c);

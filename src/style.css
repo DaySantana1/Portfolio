@@ -163,11 +163,17 @@ p {
     font-weight: 400;
 }
 
+h4{
+    color: var(--white);
+    font-weight: 400;
+}
+
 section {
     background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
     background-position: center;
 }
 
@@ -675,28 +681,19 @@ a.btn:hover {
 
 .headind-services{
     text-align: center;
-    padding-bottom: 4rem;
 }
-
-
-
 
 .services-page{
     position: relative;
     width: 100%;
-    height: 90vh;
+    min-height: 80vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    
 }
 
 .vector-image-5{
     position: absolute;
-    bottom: 3rem;
+    bottom: 1rem;
     left: 3rem;
     height: auto;
 }
@@ -704,7 +701,7 @@ a.btn:hover {
 
 .vector-image-4{
     position: absolute;
-    top: 5rem;
+    top: 0rem;
     right: 3rem;
     height: auto;
 }
@@ -717,15 +714,37 @@ a.btn:hover {
     width: 3rem;
 }
 
+
+
+.card-ferramentas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+    flex: 1 1 2rem;
+}
+
+.ferramentas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+}
+
 .service-container{
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
     gap: 3rem;
     padding: 0 5rem;
 }
 
 .services-box {
-    flex: 1 1 40rem;
+    flex: 1 1 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -747,8 +766,12 @@ a.btn:hover {
     transform: scale(1.05);
 }
 
+h4{
+    color: white;
+}
+
 .services-box i{
-    text-align: start;
+    color: var(--white);
 }
 
 @media (max-width: 768px) {
@@ -764,6 +787,8 @@ a.btn:hover {
       margin-bottom: 2rem; /* Adicionar margem inferior entre os cartões */
     }
   }
+  
+
   
 
 /* Projects Page */
@@ -886,7 +911,7 @@ a.btn:hover {
 
 .content-image {
     width: 100%;
-    height: 80vh;
+    height: 95vh;
     /* Definindo a altura como 80% da altura da viewport */
     object-fit: cover;
     /* Isso garante que a imagem cubra todo o espaço, mantendo sua proporção */
@@ -933,109 +958,18 @@ a.btn:hover {
     width: 100%;
 }
 
-.certifications{
-    height: 100vh;
-}
-
-.skillcontainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: black;
-    height: 100vh;
-  }
-
-  .skillcontainer .wrapper{
-    width: 70%;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  .skillcontainer .wrapper .card{
-    background: #262626;
-    width: calc(33% - 20px);
-    height: 300px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
-  }
-  .wrapper .card:hover{
-    background-color: var(--cinza);
-    color: black;
-    transform: translateY(-14px);
-    transition: background 1s, color 1s, transform 0.5s;
-  }
-  .skillcontainer .wrapper .card .circle{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    cursor: default;
-  }
-  .skillcontainer .card .circle .box,
-  .skillcontainer .card .circle .box span{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-  .skillcontainer .card .circle .box{
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    transition: all 0.2s;
-  }
-  
-  .skillcontainer .card .circle .box span,
-  .skillcontainer .wrapper .card .text{
-    background: -webkit-linear-gradient(left, var(--roxo-vibrante), var(--rosa));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .skillcontainer .circle .box span{
-    font-size: 38px;
-    font-family: sans-serif;
-    font-weight: 600;
-    transform: translate(-45%, -45%);
-    transition: all 0.1s;
-  }
-  .skillcontainer .card .circle:hover .box span{
-    transform: translate(-45%, -45%) scale(1.09);
-  }
-  .skillcontainer .card .text{
-    font-size: 20px;
-    font-weight: 600;
-  }
-  @media(max-width: 753px){
-    .skillcontainer .wrapper{
-      max-width: 700px;
-    }
-    .skillcontainer  .wrapper .card{
-      width: calc(50% - 20px);
-      margin-bottom: 20px;
-    }
-  }
-  @media(max-width: 505px){
-    .skillcontainer .wrapper{
-      max-width: 500px;
-    }
-    .skillcontainer .wrapper .card{
-      width: 100%;
-    }
-  }
 
 
 footer.contato{
-    background: linear-gradient(53deg,  #38026b, #5e199f,  #8ad88c);
+    background: var(--black);
     align-items: center;
     justify-content: center;
     color: var(--white);
     padding:0 7rem;
+}
+
+.footer-title{
+    padding: 1rem 0;
 }
 
 .footer-content{
@@ -1045,6 +979,7 @@ footer.contato{
 }
 
 .footer-section{
+    flex: 1 1 2rem;
     align-items: center;
     justify-content: space-between;
     gap: 200px;
@@ -1109,22 +1044,19 @@ footer.contato{
 }
 
 .socials-footer a i:hover{
-    color: var(--rosa);
+    color: var(--roxo-vibrante);
     transform: scale(1.2);
     transition: 0.5s ease;
 }
 
-.cta h3{
-    color: var(--verde-claro);
-}
 
 .cta i{
     font-size: 1.5rem;
-    color: var(--white);
+    color: var(--roxo-vibrante);
 }
 
 .cta i:hover{
-    color: var(--rosa);
+    color: var(--white);
     transform: scale(1.2);
     transition: 0.5s ease;
 }
@@ -1132,4 +1064,9 @@ footer.contato{
 .footer-image-bt img{
     padding: 0.5rem 0;
     width: 7rem;
+}
+
+.footer-bottom{
+    text-align: center;
+    padding: 1rem 0;
 }

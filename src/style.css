@@ -583,19 +583,10 @@ a.btn:hover {
     flex-direction: column;
 }
 
-
-
-
-/* Move the .vector-image-3 only to the "services" section */
-
 .vector-image-3 {
     position: absolute;
-    /* Altera a posição para absoluta */
     top: 5rem;
-    /* Ajusta a distância do topo conforme necessário */
     right: 3rem;
-    /* Ajusta a distância da direita conforme necessário */
-
     height: auto;
 
 }
@@ -679,16 +670,28 @@ a.btn:hover {
     border-radius: 100%;
 }
 
-.headind-services{
-    text-align: center;
-}
+
 
 .services-page{
+    background-color: #000;
     position: relative;
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+.services-content{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.headind-services{
+    text-align: center;
+    padding: 5rem 0;
 }
 
 .vector-image-5{
@@ -701,7 +704,7 @@ a.btn:hover {
 
 .vector-image-4{
     position: absolute;
-    top: 0rem;
+    top: 5rem;
     right: 3rem;
     height: auto;
 }
@@ -721,9 +724,15 @@ a.btn:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 0 3rem;
     padding-bottom: 2rem;
     flex: 1 1 2rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.card-ferramentas:hover{
+    transform: scale(1.05);
 }
 
 .ferramentas{
@@ -731,20 +740,20 @@ a.btn:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 2rem 5rem;
     flex-wrap: wrap;
 }
 
 .service-container{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 3rem;
-    padding: 0 5rem;
+    margin: 3rem 5rem;
 }
 
 .services-box {
-    flex: 1 1 2rem;
+    flex: 1 1 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -752,12 +761,13 @@ a.btn:hover {
     text-align: center;
     background: var(--roxo-vibrante);
     padding: 1rem;
-    width: 12rem;
-    height: 12rem;
+    width: 15rem;
+    height: 13rem;
     border-radius: 5px;
     border: 3px solid transparent;
     cursor: pointer;
     transition: 0.5s ease;
+    margin: 1rem 0.5rem;
 }
 
 .services-box:hover{
@@ -777,14 +787,13 @@ h4{
 @media (max-width: 768px) {
     .service-container {
       flex-direction: column;
+      align-items: center;
       padding: 0 1rem; /* Reduzir o padding para telas menores */
     }
   
     .services-box {
       width: calc(100% - 4rem); 
-      height: 5rem;/* Ajustar a largura para ocupar quase toda a largura disponível */
-      max-width: 300px; /* Limitar a largura máxima */
-      margin-bottom: 2rem; /* Adicionar margem inferior entre os cartões */
+      height: fit-content;/* Ajustar a largura para ocupar quase toda a largura disponível */
     }
   }
   
@@ -965,7 +974,7 @@ footer.contato{
     align-items: center;
     justify-content: center;
     color: var(--white);
-    padding:0 7rem;
+    padding:0 5rem;
 }
 
 .footer-title{
@@ -997,7 +1006,7 @@ footer.contato{
 }
 
 .image-footer img {
-    width: 17rem;
+    width: 14rem;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;

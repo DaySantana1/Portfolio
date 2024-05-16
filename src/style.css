@@ -379,7 +379,7 @@ section {
     transform: scale(1.1);
 }
 
-.nav-list {
+.nav-links {
     z-index: 1001;
     display: flex;
     align-items: center;
@@ -387,7 +387,7 @@ section {
     list-style-type: none;
 }
 
-.nav-list li {
+.nav-links li {
     margin: 0 20px;
     font-size: 15px;
     cursor: pointer;
@@ -397,16 +397,16 @@ section {
     border-bottom: 2px solid var(--roxo-escuro);
 }
 
-.nav-list a i {
+.nav-links a i {
     font-size: 1.5rem;
 }
 
-.nav-list a i:hover {
+.nav-links a i:hover {
     transform: scale(1.2);
     transition: 0.3s ease;
 }
 
-.nav-list li a {
+.nav-links li a {
     position: relative;
     display: block;
     cursor: pointer;
@@ -416,14 +416,14 @@ section {
     text-decoration: none;
 }
 
-.nav-list li a:hover {
+.nav-links li a:hover {
     color: #fff;
     text-decoration: none;
 
 }
 
-.nav-list li a:before,
-.nav-list a:after {
+.nav-links li a:before,
+.nav-links a:after {
     content: '';
     position: absolute;
     width: 0%;
@@ -432,30 +432,30 @@ section {
     background: #fff;
 }
 
-.nav-list li a:before {
+.nav-links li a:before {
     left: 0;
 }
 
-.nav-list li a:after {
+..nav-linksli a:after {
     right: 0;
     background: linear-gradient(80deg, #87ff8b, #d5b5ff);
     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.nav-list li a:hover:before {
+.nav-links li a:hover:before {
     background: linear-gradient(80deg, #87ff8b, #d5b5ff);
     width: 110%;
     transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.nav-list li a:hover:after {
+.nav-links li a:hover:after {
     background: transparent;
     width: 110%;
     transition: 0s;
 
 }
 
-.nav-list button {
+.nav-links button {
     padding: 0.1rem 0.5rem;
     margin: 0 2rem;
     border: none;
@@ -466,22 +466,108 @@ section {
     border-radius: 0.3rem;
 }
 
-.nav-list button a i {
+.nav-links button a i {
     padding: 2px;
 }
 
-.nav-list button a:hover {
+.nav-links button a:hover {
     color: var(--roxo-escuro) !important;
     border: none;
 }
 
-.nav-list button i {
+.nav-links button i {
     font-size: 1rem;
 }
 
-.nav-list button:hover {
+.nav-links button:hover {
     background-color: #fff;
     transform: scale(1.1);
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
 }
 
 /* Home Section */
@@ -614,9 +700,7 @@ a.btn:hover {
     align-items: center;
 }
 
-.content-wrapper {
-    min-height: 100vh;
-}
+
 
 .services .content-reading {
     flex: 1;
@@ -644,12 +728,68 @@ a.btn:hover {
 
 /* Image About */
 .image-about img {
-    width: 20rem;
+    width: 18rem;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
+
+@media (max-width: 768px) {
+    .image-about img {
+        width: 15rem;   
+        animation: none;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .content-reading{
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        padding: 5rem 0;
+    }
+
+    .content-reading p{
+        width: 100%;
+    }
+    
+    .services{
+        padding: 0 1rem;
+    }
+
+    .vector-image{
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        height: auto;
+    }
+
+        .vector-image-2 {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        height: auto;
+    
+    }
+
+    .vector-image-3 {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        height: auto;
+    
+    }
+
+
+
+    
+  }
 
 @keyframes floating {
     from {
@@ -676,7 +816,6 @@ a.btn:hover {
     background-color: #000;
     position: relative;
     width: 100%;
-    min-height: 100vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -686,7 +825,7 @@ a.btn:hover {
     position: relative;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around; 
 }
 
 .headind-services{
@@ -694,18 +833,13 @@ a.btn:hover {
     padding: 5rem 0;
 }
 
-.vector-image-5{
-    position: absolute;
-    bottom: 1rem;
-    left: 3rem;
-    height: auto;
-}
+
     
 
 .vector-image-4{
     position: absolute;
-    top: 5rem;
-    right: 3rem;
+    bottom: 0;
+    right: 1rem;
     height: auto;
 }
 
@@ -724,7 +858,7 @@ a.btn:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0 3rem;
+    padding: 1rem;
     padding-bottom: 2rem;
     flex: 1 1 2rem;
     cursor: pointer;
@@ -740,8 +874,8 @@ a.btn:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 2rem 5rem;
     flex-wrap: wrap;
+    padding: 0 2rem;
 }
 
 .service-container{
@@ -749,22 +883,22 @@ a.btn:hover {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin: 3rem 5rem;
+    margin: 1rem;
 }
 
 .services-box {
-    flex: 1 1 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;    
     justify-content: center;
     text-align: center;
-    background: var(--roxo-vibrante);
+    background: transparent;
+    background: linear-gradient(rgb(123, 53, 214) 34%, rgb(85, 13, 151));
     padding: 1rem;
     width: 15rem;
-    height: 13rem;
+    height: 17rem;
     border-radius: 5px;
-    border: 3px solid transparent;
+    border: none;
     cursor: pointer;
     transition: 0.5s ease;
     margin: 1rem 0.5rem;
@@ -788,7 +922,6 @@ h4{
     .service-container {
       flex-direction: column;
       align-items: center;
-      padding: 0 1rem; /* Reduzir o padding para telas menores */
     }
   
     .services-box {
@@ -798,17 +931,17 @@ h4{
   }
   
 
-  
+
 
 /* Projects Page */
 .projects {
-    background: linear-gradient(53deg, #d88ad8, #5e199f, #38026b, #8ad88c);
-    background-size: 800% 800%;
+    background: var(--black);
+    /* background-size: 800% 800%;
 
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
     -o-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite; */
     min-height: 100vh;
     padding: 0 5rem;
 }
@@ -871,7 +1004,7 @@ h4{
 
 .projects-title {
     padding-top: 5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     text-align: center;
 }
 
@@ -880,18 +1013,33 @@ h4{
     width: 100%;
 }
 
+.projects{
+    display: flex;
+    flex-direction: column;
+}
 
-.container .title {
+.project-items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content{
+    border-radius: 5px;
+    background-color: var(--roxo-escuro);
+    width: 40%;
+    height: 70vh;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container  {
     color: #1a1a1a;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.content {
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-}
+
 
 .show-more {
     cursor: pointer;
@@ -982,16 +1130,13 @@ footer.contato{
 }
 
 .footer-content{
-    align-items: center;
-    padding-top: 5rem;
-
+    padding-top: 4rem;
 }
 
 .footer-section{
     flex: 1 1 2rem;
     align-items: center;
     justify-content: space-between;
-    gap: 200px;
     display: flex;
     flex-direction: row;
 }
@@ -1079,3 +1224,21 @@ footer.contato{
     text-align: center;
     padding: 1rem 0;
 }
+
+@media (max-width: 768px){
+    .footer-section{
+        flex: 1 1 2rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-footer img{
+        animation: none;
+    }
+    
+    footer.contato{
+        padding:0 1rem;
+        text-align: center;
+    }
+    }

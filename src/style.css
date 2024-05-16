@@ -1182,6 +1182,7 @@ footer.contato{
     height: 1px;
     background: var(--white);
     align-items: center;
+    margin: 2rem 0;
   }
 
 .footer-section-bt{

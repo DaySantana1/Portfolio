@@ -365,9 +365,7 @@ section {
     transform: translateY(-100%);
 }
 
-#menu {
-    cursor: pointer;
-}
+
 
 .logo {
     cursor: pointer;
@@ -436,7 +434,7 @@ section {
     left: 0;
 }
 
-..nav-linksli a:after {
+.nav-linksli a:after {
     right: 0;
     background: linear-gradient(80deg, #87ff8b, #d5b5ff);
     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -501,6 +499,7 @@ section {
     nav{
         position: fixed;
         z-index: 3;
+        width: 100%;
     }
     .hamburger{
         display:block;
@@ -516,7 +515,7 @@ section {
         position: fixed;
         background: #131418;
         height: 100vh;
-        width: 100%;
+        width: 100vw; /* Modificado de 100vh para 100vw */
         flex-direction: column;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
@@ -524,8 +523,8 @@ section {
         pointer-events: none;
     }
     .nav-links.open{
-        clip-path: circle(1000px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
+        clip-path: circle(100% at 50% 50%); /* Modificado para abrir totalmente a tela */
+        -webkit-clip-path: circle(100% at 50% 50%); /* Modificado para abrir totalmente a tela */
         pointer-events: all;
     }
     .nav-links li{
@@ -557,6 +556,7 @@ section {
     li.fade{
         opacity: 1;
     }
+
 }
 /*Animating Hamburger Icon on Click*/
 .toggle .line1{
@@ -592,6 +592,7 @@ section {
     margin: 1rem 0;
     letter-spacing: 2px;
 }
+
 
 
 
@@ -729,6 +730,7 @@ a.btn:hover {
 /* Image About */
 .image-about img {
     width: 18rem;
+    margin: 1rem;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -752,7 +754,7 @@ a.btn:hover {
         text-align: center;
         justify-content: center;
         text-align: center;
-        padding: 5rem 0;
+        padding: 2rem 0;
     }
 
     .content-reading p{
@@ -883,7 +885,6 @@ a.btn:hover {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin: 1rem;
 }
 
 .services-box {
@@ -893,15 +894,15 @@ a.btn:hover {
     justify-content: center;
     text-align: center;
     background: transparent;
-    background: linear-gradient(rgb(123, 53, 214) 34%, rgb(85, 13, 151));
+    background-color: var(--roxo-escuro);
     padding: 1rem;
-    width: 15rem;
+    max-width:  15rem;
     height: 17rem;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     transition: 0.5s ease;
-    margin: 1rem 0.5rem;
+    margin: 1rem 0.3rem;
 }
 
 .services-box:hover{
@@ -1149,9 +1150,32 @@ footer.contato{
 .cta{
     margin: 1rem 0;
 }
+a.btn-2 {
+    display: inline-block;
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--roxo-escuro);
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+a.btn-2:hover{
+    background-color: var(--white);
+    color: var(--roxo-escuro);
+    transition: 0.5s ease;
+    transform: scale(1.03);
+}
+
 
 .image-footer img {
-    width: 14rem;
+    width: 13rem;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -1182,7 +1206,7 @@ footer.contato{
     height: 1px;
     background: var(--white);
     align-items: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
 .footer-section-bt{
@@ -1236,6 +1260,7 @@ footer.contato{
 
     .image-footer img{
         animation: none;
+        width: 12rem;
     }
     
     footer.contato{

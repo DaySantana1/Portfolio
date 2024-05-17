@@ -20,21 +20,22 @@ var TxtType = function(el, toRotate, period) {
     this.isDeleting = false;
 };
 
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const links = document.querySelectorAll(".nav-links li");
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger'); // Seleciona o ícone do hambúrguer
+    const nav = document.querySelector('.nav'); // Seleciona o elemento de navegação
+    const navLinks = document.querySelector('.nav-links'); // Seleciona o menu de navegação
 
-hamburger.addEventListener('click', () => {
-    // Animate Links
-    navLinks.classList.toggle("open");
-    links.forEach(link => {
-        link.classList.toggle("fade");
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open'); // Alterna a classe 'open' no menu de navegação
+        nav.classList.toggle('open'); // Alterna a classe 'open' no elemento de navegação
+        hamburger.classList.toggle('open'); // Alterna a classe 'open' no ícone do hambúrguer
+
+        // Alterna a classe 'open-bg' no elemento de navegação para mudar a cor de fundo
+        nav.classList.toggle('open-bg');
     });
-
-    // Hamburger Animation
-    hamburger.classList.toggle("toggle");
 });
 
+  
 
 window.addEventListener('scroll', function() {
     var nav = document.querySelector('.nav');

@@ -19,23 +19,35 @@ var TxtType = function(el, toRotate, period) {
     this.tick();
     this.isDeleting = false;
 };
-
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger'); // Seleciona o ícone do hambúrguer
     const nav = document.querySelector('.nav'); // Seleciona o elemento de navegação
     const navLinks = document.querySelector('.nav-links'); // Seleciona o menu de navegação
+    const navLinksItems = document.querySelectorAll('.nav-links li a'); // Seleciona os links do menu de navegação
 
+    // Função para fechar o menu hamburguer
+    const closeHamburgerMenu = () => {
+        navLinks.classList.remove('open'); // Fecha o menu hamburguer
+        nav.classList.remove('open-bg'); // Remove a classe 'open-bg' do elemento de navegação para restaurar a cor original
+        nav.classList.remove('open'); // Remove a classe 'open' do elemento de navegação
+        hamburger.classList.remove('open'); // Remove a classe 'open' do ícone do hambúrguer
+    };
+
+    // Event listener para abrir e fechar o menu hamburguer ao clicar no ícone do hambúrguer
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('open'); // Alterna a classe 'open' no menu de navegação
+        nav.classList.toggle('open-bg'); // Alterna a classe 'open-bg' no elemento de navegação para mudar a cor de fundo
         nav.classList.toggle('open'); // Alterna a classe 'open' no elemento de navegação
         hamburger.classList.toggle('open'); // Alterna a classe 'open' no ícone do hambúrguer
+    });
 
-        // Alterna a classe 'open-bg' no elemento de navegação para mudar a cor de fundo
-        nav.classList.toggle('open-bg');
+    // Event listener para fechar o menu hamburguer quando um link é clicado
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            closeHamburgerMenu(); // Chama a função para fechar o menu hamburguer
+        });
     });
 });
-
-  
 
 window.addEventListener('scroll', function() {
     var nav = document.querySelector('.nav');

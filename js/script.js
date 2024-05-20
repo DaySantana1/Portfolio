@@ -361,4 +361,49 @@ let options = {
     value: 0.60
   });
 
+  // fade in grid items  ==================================
+
+  $(document).on("scroll", function () {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+    var tags = $(".fadein");
+  
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i];
+  
+      if ($(tag).offset().top < pageBottom - 20) { // Adiciona um offset para iniciar a animação antes do elemento estar completamente visível
+        $(tag).addClass("visible");
+      } else {
+        $(tag).removeClass("visible");
+      }
+    }
+  });
+
+  $(document).on("scroll", function () {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+    
+    var fadeinTopTags = $(".fadein-top");
+    var fadeinBottomTags = $(".fadein-bottom");
+  
+    for (var i = 0; i < fadeinTopTags.length; i++) {
+      var tag = fadeinTopTags[i];
+  
+      if ($(tag).offset().top < pageBottom - 20) {
+        $(tag).addClass("visible");
+      } else {
+        $(tag).removeClass("visible");
+      }
+    }
+  
+    for (var j = 0; j < fadeinBottomTags.length; j++) {
+      var tag = fadeinBottomTags[j];
+  
+      if ($(tag).offset().top < pageBottom - 20) {
+        $(tag).addClass("visible");
+      } else {
+        $(tag).removeClass("visible");
+      }
+    }
+  });
   

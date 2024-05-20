@@ -636,20 +636,80 @@ a.btn {
     font-weight: 500;
 }
 
+a.btn-1 {
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--roxo-vibrante);
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+a.btn-1:hover {
+    background-color: var(--white);
+    color: var(--roxo-escuro);
+    transition: 0.5s ease;
+    transform: scale(1.03);
+    border: none;
+}
+
 a.btn i {
     padding: 2px;
     font-size: 0.7rem;
 }
 
 a.btn:hover {
-    background-color: var(--roxo-vibrante);
+    background-color: var(--white);
+    color: var(--roxo-escuro);
     transition: 0.5s ease;
     transform: scale(1.03);
     border: none;
 }
 
+.fadein {
+    opacity: 0;
+    transform: translateY(-8rem);
+    transition: opacity 2s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fadein.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
 
 /* Services Section */
+
+.fadein-top {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fadein-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fadein-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fadein-bottom.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 .services {
     position: relative;
     /* Adiciona posição relativa para que a posição absoluta funcione dentro */
@@ -715,6 +775,7 @@ a.btn:hover {
     width: 60%;
     margin: 2rem 0;
     color: #fff;
+    gap: 1rem;
     font-weight: 400;
 }
 
@@ -938,7 +999,7 @@ h4{
     padding: 0 5rem;
 }
 
-@-webkit-keyframes AnimationName {
+/* @-webkit-keyframes AnimationName {
     0% {
         background-position: 86% 0%
     }
@@ -992,7 +1053,7 @@ h4{
     100% {
         background-position: 86% 0%
     }
-}
+} */
 
 .projects-title {
     padding-top: 5rem;
@@ -1001,8 +1062,7 @@ h4{
 }
 
 .projects img {
-
-    width: 100%;
+    width: 50%;
 }
 
 .projects{
@@ -1016,13 +1076,40 @@ h4{
 }
 
 .content{
-    border-radius: 5px;
-    background-color: var(--roxo-escuro);
-    width: 40%;
-    height: 70vh;
+    border-radius: 20px;
+    width: calc(100% - 10%);
+    padding-top: 1rem;
     position: relative;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    background-color: var(--verde-opaco);
+}
+
+.content1{
+    border-radius: 20px;
+    width: calc(100% - 10%);
+    padding-top: 1rem;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    justify-content: space-around;
+    background-color: var(--roxo-opaco);
+}
+
+.content-details1{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .container  {
@@ -1038,69 +1125,6 @@ h4{
     color: #607186;
     display: block;
     background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
-}
-
-
-.content .content-overlay {
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    height: 99%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    transition: all 0.4s ease-in-out 0s;
-}
-
-.content:hover .content-overlay {
-    opacity: 1;
-}
-
-.content-image {
-    width: 100%;
-    height: 95vh;
-    /* Definindo a altura como 80% da altura da viewport */
-    object-fit: cover;
-    /* Isso garante que a imagem cubra todo o espaço, mantendo sua proporção */
-}
-
-
-.content-details {
-    position: absolute;
-    text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.content:hover .content-details {
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-}
-
-.content-details h3 {
-    color: #fff;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.5em;
-    text-transform: uppercase;
-}
-
-.content-details p {
-    color: #fff;
-    font-size: 0.8em;
-}
-
-.fadeIn-bottom {
-    top: 80%;
 }
 
 .projects video {

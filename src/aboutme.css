@@ -28,8 +28,8 @@ body {
 
 
 .content-aboutme {
-   padding: 1rem 5rem;
-   min-height: 80vh;
+   padding: 5rem;
+   max-height: 80vh;
    align-items: center;
    justify-content: center;
    display: flex;
@@ -46,22 +46,53 @@ body {
 }
 
 .title-about h4{
+   margin: 1rem 0;
    font-weight: 200;
 }
 
-.title-about img {
-   width: 12rem;
+.skills-img{
+   width: 100%;
+}
+
+.skills-img  {
+   width: calc(100% - 70%);
    height: auto;
    padding: 3rem 0;
 }
 
 .skills-about {
-   height: 90vh;
+   max-height: 90vh;
    display: flex;
    flex-direction: row;
-   padding: 4rem 5rem;
+   padding: 4rem;
    justify-content: space-between;
    align-items: center;
+}
+
+@media screen and (max-width: 800px){
+   .content-aboutme{
+      padding: 4rem 1rem;
+   }
+
+   .skills-about {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center ;
+      padding: 1rem;
+      align-items: center;
+   }
+
+   #skills{
+      margin: 0;
+      width: 100% !important;
+    }
+   
+    .skills-img  {
+      width: calc(100% - 50%);
+      height: auto;
+      padding: 1rem 0;
+   }
+    
 }
 
 /* skills bar */

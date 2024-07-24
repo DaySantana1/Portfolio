@@ -436,3 +436,32 @@ let options = {
     });
     
   })(jQuery);
+
+   // portfolio
+ $('.gallery ul li a').click(function() {
+  var itemID = $(this).attr('href');
+  $('.gallery ul').addClass('item_open');
+  $(itemID).addClass('item_open');
+  return false;
+});
+$('.close').click(function() {
+  $('.port, .gallery ul').removeClass('item_open');
+  return false;
+});
+
+$(".gallery ul li a").click(function() {
+  $('html, body').animate({
+      scrollTop: parseInt($("#top").offset().top)
+  }, 400);
+});
+
+// portfolio
+$(document).ready(function() {
+  $('.gallery ul li a').click(function() {
+      var href = $(this).attr('href');
+      window.location.href = href; // Redireciona para a nova página
+      return false; // Previne o comportamento padrão do link
+  });
+});
+
+ 

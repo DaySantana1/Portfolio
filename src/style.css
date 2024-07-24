@@ -12,7 +12,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
 }
 
 a {
@@ -169,6 +170,7 @@ h4 {
 }
 
 section {
+    
     background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
@@ -686,29 +688,6 @@ a.btn:hover {
 
 
 
-/* Services Section */
-
-.fadein-top {
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fadein-top.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fadein-bottom {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fadein-bottom.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .services {
     position: relative;
@@ -874,7 +853,6 @@ a.btn:hover {
 
 
 .services-page {
-    background-color: #000;
     position: relative;
     width: 100%;
     background-attachment: fixed;
@@ -893,9 +871,6 @@ a.btn:hover {
     text-align: center;
     padding: 5rem 0;
 }
-
-
-
 
 .vector-image-4 {
     position: absolute;
@@ -963,7 +938,7 @@ a.btn:hover {
     border: none;
     cursor: pointer;
     transition: 0.5s ease;
-    margin: 1rem ;
+    margin: 1rem;
 }
 
 .services-box:hover {
@@ -995,263 +970,25 @@ h4 {
 }
 
 
-
-
-/* Projects Page */
-.projects {
-    background: var(--black);
-    /* background-size: 800% 800%;
-
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    -o-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite; */
-    
-    padding: 2rem 5rem;
-}
-
-/* @-webkit-keyframes AnimationName {
-    0% {
-        background-position: 86% 0%
-    }
-
-    50% {
-        background-position: 15% 100%
-    }
-
-    100% {
-        background-position: 86% 0%
-    }
-}
-
-@-moz-keyframes AnimationName {
-    0% {
-        background-position: 86% 0%
-    }
-
-    50% {
-        background-position: 15% 100%
-    }
-
-    100% {
-        background-position: 86% 0%
-    }
-}
-
-@-o-keyframes AnimationName {
-    0% {
-        background-position: 86% 0%
-    }
-
-    50% {
-        background-position: 15% 100%
-    }
-
-    100% {
-        background-position: 86% 0%
-    }
-}
-
-@keyframes AnimationName {
-    0% {
-        background-position: 86% 0%
-    }
-
-    50% {
-        background-position: 15% 100%
-    }
-
-    100% {
-        background-position: 86% 0%
-    }
-} */
-
-.projects-title {
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    text-align: center;
-}
-
-.projects img {
-    width: 45%;
-}
-
-.projects {
-    display: flex;
-    flex-direction: column;
-}
-
-.project-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.content {
-    border-radius: 20px;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    cursor: pointer;
-    display: flex;
-    flex-wrap: nowrap;
-    transition: 0.5s ease;
-    justify-content: space-around;
-    background-color: #325f3d;
-}
-
-.content1 {
-    border-radius: 20px;
-    padding-top: 1rem;
-    padding-right: 1rem;
-    position: relative;
-    margin: auto;
-    transition: 0.5s ease;
-    cursor: pointer;
-    overflow: hidden;
-    flex-wrap: nowrap;
-    display: flex;
-    justify-content: space-around;
-    background-color: #31195f;
-}
-
-.content:hover {
-    transform: scale(1.05);
-}
-
-.content1:hover {
-    transform: scale(1.05);
-}
-
-.btn-5 {
-    color: white;
-    padding: 0.4rem;
-    background-color: transparent;
-    border: 1px solid var(--white);
-    border-radius: 5px;
-    margin: 1rem 0;
-    transition: 0.5s ease;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-.btn-5:hover {
-    background-color: var(--white);
-    color: var(--roxo-escuro);
-    transform: scale(1.05);
-}
-
-.content-text1 {
-    width: calc(100% - 10%);
-    text-align: left;
-    margin: 1rem 0;
-    font-size: 90%;
-}
-
-
-
-@media (max-width: 700px) {
-
-    .projects {
-        padding: 0 2rem;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 1rem 0;
-    }
-
-    .content1 {
-        display: flex;
-        padding: 1rem 0;
-        flex-direction: column-reverse;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .projects img {
-        width: 95%;
-    }
-
-
-
-}
-
-
-
-.btn-3 {
-    display: inline-block;
-    /* Define o botão como um elemento inline-block */
-    width: auto;
-    /* Permite que o botão tome o tamanho necessário */
-    text-align: center;
-    /* Centraliza o texto dentro do botão */
-    align-items: center;
-    margin: 2rem auto;
-    /* Centraliza o botão horizontalmente */
-    transition: 0.5s ease;
-    background-color: transparent;
-    border: 1px var(--white) solid;
-    padding: 0.7rem;
-    /* Adiciona padding horizontal para um tamanho consistente */
-    color: var(--white);
-    border-radius: 5px;
-    text-decoration: none;
-    /* Remove sublinhado do link */
-    cursor: pointer;
-    /* Adiciona o cursor pointer */
-}
-
-.btn-3:hover {
-    background-color: var(--roxo-vibrante);
-    border: none;
-    transform: scale(1.05);
-}
-
-.content-details1 {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.show-more {
-    cursor: pointer;
-    color: #607186;
-    display: block;
-    background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
-}
-
-.projects video {
-    width: 100%;
-}
-
-
-
-footer.contato {
-    background: var(--black);
+section.contato {
     align-items: center;
     justify-content: center;
     color: var(--white);
     padding: 0 5rem;
 }
 
-.footer-title {
-    padding: 1rem 0;
-}
-
-.footer-info{
-    max-width: 65%;
+@media (min-width: 1400px) {
+ 
+    section.contato {
+        background-color: #000;
+        width: 100%; /* Define a largura total */
+        max-width: 1400px; /* Define a largura máxima do ul */
+        margin: 0 auto; /* Centraliza o ul horizontalmente */
+    }
 }
 
 .footer-content {
-    padding-top: 4rem;
+    padding-top: 1rem;
 }
 
 .footer-section {
@@ -1262,10 +999,6 @@ footer.contato {
     flex-direction: row;
 }
 
-
-.contact-section {
-    padding: 1rem 0;
-}
 
 .cta {
     margin: 1rem 0;
@@ -1296,7 +1029,7 @@ a.btn-2:hover {
 
 
 .image-footer img {
-    width: 13rem;
+    width: 10rem;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -1327,11 +1060,13 @@ a.btn-2:hover {
     height: 1px;
     background: var(--white);
     align-items: center;
-    margin: 1rem 0;
+    margin: 0.2rem 0;
 }
 
 .footer-section-bt {
     padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -1368,7 +1103,14 @@ a.btn-2:hover {
 
 .footer-bottom {
     text-align: center;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    color: grey;
+
+}
+
+.email-text {
+    padding: 0.5rem 0;
 }
 
 @media (max-width: 768px) {
@@ -1384,8 +1126,159 @@ a.btn-2:hover {
         width: 12rem;
     }
 
-    footer.contato {
+    section.contato {
         padding: 0 1rem;
         text-align: center;
+    }
+}
+
+/* Mixin transition */
+.transition {
+    transition: var(--transition-property) var(--transition-time) var(--method);
+    -webkit-transition: var(--transition-property) var(--transition-time) var(--method);
+    -moz-transition: var(--transition-property) var(--transition-time) var(--method);
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* PROJECTS */
+.projects-title{
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+.gallery {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.gallery ul {
+    padding: 0.5rem;
+    display: grid; /* Usa grid layout */
+    gap: 0.5rem; /* Espaço entre os itens */
+    list-style: none; /* Remove os marcadores da lista */
+    justify-content: center; /* Centraliza o grid horizontalmente */
+}
+
+.gallery ul li {
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Alinha o conteúdo dentro do item */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.gallery ul li a {
+    display: block; /* Faz com que o link se comporte como um bloco */
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery ul li a:before {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -16px;
+    background: url(data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%0A%09%20id%3D%22svg2%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Asodipodi%3D%22http%3A//sodipodi.sourceforge.net/DTD/sodipodi-0.dtd%22%20xmlns%3Ainkscape%3D%22http%3A//www.inkscape.org/namespaces/inkscape%22%20inkscape%3Aversion%3D%220.48.4%20r9939%22%20sodipodi%3Adocname%3D%22icon-fullscreen.svg%22%0A%09%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20960%20560%22%0A%09%20enable-background%3D%22new%200%200%20960%20560%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Csodipodi%3Anamedview%20%20borderopacity%3D%221%22%20pagecolor%3D%22%23ffffff%22%20bordercolor%3D%22%23666666%22%20objecttolerance%3D%2210%22%20gridtolerance%3D%2210%22%20guidetolerance%3D%2210%22%20showgrid%3D%22false%22%20fit-margin-top%3D%220%22%20fit-margin-left%3D%220%22%20inkscape%3Azoom%3D%227.375%22%20inkscape%3Acx%3D%22-5.1525424%22%20inkscape%3Acy%3D%2216%22%20id%3D%22namedview11%22%20inkscape%3Awindow-x%3D%22-8%22%20inkscape%3Awindow-y%3D%22-8%22%20fit-margin-right%3D%220%22%20inkscape%3Apageopacity%3D%220%22%20fit-margin-bottom%3D%220%22%20inkscape%3Awindow-width%3D%221366%22%20inkscape%3Awindow-height%3D%22706%22%20inkscape%3Awindow-maximized%3D%221%22%20inkscape%3Apageshadow%3D%222%22%20inkscape%3Acurrent-layer%3D%22svg2%22%3E%0A%09%3C/sodipodi%3Anamedview%3E%0A%3Cg%3E%0A%09%3Crect%20x%3D%22220%22%20y%3D%22260%22%20fill%3D%22%23FFFFFF%22%20width%3D%22536%22%20height%3D%2224%22/%3E%0A%3C/g%3E%0A%3Cg%3E%0A%09%3Crect%20x%3D%22476%22%20y%3D%224%22%20fill%3D%22%23FFFFFF%22%20width%3D%2224%22%20height%3D%22556%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A) no-repeat;
+    content: '';
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
+}
+
+.gallery ul li a:hover:before {
+    opacity: 1;
+}
+
+.gallery ul li a:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3); /* Cor de fundo cinza quase transparente */
+    content: '';
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
+}
+
+.gallery ul li a:hover:after {
+    opacity: 1; /* Torna visível ao passar o cursor */
+}
+
+.gallery ul li a .hover-content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+    opacity: 0; /* Inicialmente invisível */
+    width: calc(100% - 20px); /* Ajusta a largura com base no padding */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+.gallery ul li a:hover .hover-content {
+    opacity: 1; /* Torna visível ao passar o cursor */
+}
+
+.hover-content h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.hover-content .tags {
+    margin: 0;
+    font-size: 14px;
+}
+
+.hover-content .tags span {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 2px 5px;
+    background: #444;
+    border-radius: 3px;
+}
+
+@media (min-width: 1400px) {
+    .gallery-container {
+        padding: 0; /* Remove o padding extra */
+    }
+    
+    .gallery ul {
+        width: 100%; /* Define a largura total */
+        max-width: 1400px; /* Define a largura máxima do ul */
+        margin: 0 auto; /* Centraliza o ul horizontalmente */
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho fixo */
+    }
+}
+
+/* Ajuste para telas maiores que 1200px */
+@media (min-width: 1200px) {
+    .gallery ul {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    }
+}
+
+/* Ajuste para telas entre 1199px e 700px */
+@media (min-width: 700px) and (max-width: 1199px) {
+    .gallery ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+/* Ajuste para telas menores que 700px */
+@media (max-width: 700px) {
+    .gallery ul {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna */
     }
 }

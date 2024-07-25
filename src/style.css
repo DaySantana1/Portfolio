@@ -170,7 +170,7 @@ h4 {
 }
 
 section {
-    
+
     background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
@@ -333,15 +333,13 @@ section {
 }
 
 
-
 /* Navigation */
 .nav {
     z-index: 1000;
     padding: 1rem 0;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Centraliza o contêiner interno horizontalmente */
     color: #fff;
     position: fixed;
     width: 100%;
@@ -349,6 +347,8 @@ section {
     left: 0;
     backdrop-filter: blur(5px);
 }
+
+
 
 .scroll-bg {
     backdrop-filter: blur(5px);
@@ -731,6 +731,19 @@ a.btn:hover {
     align-items: center;
 }
 
+@media (min-width: 1400px) {
+    .services .content-wrapper {
+        width: 100%;
+        /* Define a largura total */
+        max-width: 1400px;
+        /* Define a largura máxima do ul */
+        margin: 0 auto;
+        /* Centraliza o ul horizontalmente */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 colunas de tamanho fixo */
+    }
+}
+
 
 
 .services .content-reading {
@@ -978,13 +991,17 @@ section.contato {
 }
 
 @media (min-width: 1400px) {
- 
-    section.contato {
-        background-color: #000;
-        width: 100%; /* Define a largura total */
-        max-width: 1400px; /* Define a largura máxima do ul */
-        margin: 0 auto; /* Centraliza o ul horizontalmente */
+
+    .footer-section {
+        width: 100%;
+        /* Define a largura total */
+        max-width: 1400px;
+        /* Define a largura máxima do ul */
+        margin: 0 auto;
+        /* Centraliza o ul horizontalmente */
     }
+
+
 }
 
 .footer-content {
@@ -1123,7 +1140,7 @@ a.btn-2:hover {
 
     .image-footer img {
         animation: none;
-        width: 12rem;
+        width: 10rem;
     }
 
     section.contato {
@@ -1141,15 +1158,17 @@ a.btn-2:hover {
 
 img {
     max-width: 100%;
-    height: auto; /* Mantém a proporção da imagem */
+    height: auto;
+    /* Mantém a proporção da imagem */
 }
 
 /* PROJECTS */
-.projects-title{
+.projects-title {
     text-align: center;
     padding-top: 5rem;
     padding-bottom: 2rem;
 }
+
 .gallery {
     min-height: 100vh;
     position: relative;
@@ -1159,22 +1178,30 @@ img {
 
 .gallery ul {
     padding: 0.5rem;
-    display: grid; /* Usa grid layout */
-    gap: 0.5rem; /* Espaço entre os itens */
-    list-style: none; /* Remove os marcadores da lista */
-    justify-content: center; /* Centraliza o grid horizontalmente */
+    display: grid;
+    /* Usa grid layout */
+    gap: 0.5rem;
+    /* Espaço entre os itens */
+    list-style: none;
+    /* Remove os marcadores da lista */
+    justify-content: center;
+    /* Centraliza o grid horizontalmente */
 }
 
 .gallery ul li {
     position: relative;
     overflow: hidden;
-    display: flex; /* Alinha o conteúdo dentro do item */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    display: flex;
+    /* Alinha o conteúdo dentro do item */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
 }
 
 .gallery ul li a {
-    display: block; /* Faz com que o link se comporte como um bloco */
+    display: block;
+    /* Faz com que o link se comporte como um bloco */
     position: relative;
     overflow: hidden;
 }
@@ -1190,7 +1217,8 @@ img {
     content: '';
     opacity: 0;
     z-index: 1;
-    transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
+    transition: opacity 0.3s ease;
+    /* Adiciona uma transição suave para a opacidade */
 }
 
 .gallery ul li a:hover:before {
@@ -1203,14 +1231,18 @@ img {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.3); /* Cor de fundo cinza quase transparente */
+    background: rgba(0, 0, 0, 0.3);
+    /* Cor de fundo cinza quase transparente */
     content: '';
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 0.3s ease;
+    /* Adiciona uma transição suave para a opacidade */
 }
 
 .gallery ul li a:hover:after {
-    opacity: 1; /* Torna visível ao passar o cursor */
+    opacity: 1;
+    /* Torna visível ao passar o cursor */
 }
 
 .gallery ul li a .hover-content {
@@ -1221,14 +1253,19 @@ img {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
-    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
-    opacity: 0; /* Inicialmente invisível */
-    width: calc(100% - 20px); /* Ajusta a largura com base no padding */
-    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+    transition: opacity 0.3s ease;
+    /* Transição suave para a opacidade */
+    opacity: 0;
+    /* Inicialmente invisível */
+    width: calc(100% - 20px);
+    /* Ajusta a largura com base no padding */
+    box-sizing: border-box;
+    /* Inclui padding e borda no tamanho total */
 }
 
 .gallery ul li a:hover .hover-content {
-    opacity: 1; /* Torna visível ao passar o cursor */
+    opacity: 1;
+    /* Torna visível ao passar o cursor */
 }
 
 .hover-content h4 {
@@ -1251,34 +1288,42 @@ img {
 
 @media (min-width: 1400px) {
     .gallery-container {
-        padding: 0; /* Remove o padding extra */
+        padding: 0;
+        /* Remove o padding extra */
     }
-    
+
     .gallery ul {
-        width: 100%; /* Define a largura total */
-        max-width: 1400px; /* Define a largura máxima do ul */
-        margin: 0 auto; /* Centraliza o ul horizontalmente */
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho fixo */
+        width: 100%;
+        /* Define a largura total */
+        max-width: 1400px;
+        /* Define a largura máxima do ul */
+        margin: 0 auto;
+        /* Centraliza o ul horizontalmente */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 colunas de tamanho fixo */
     }
 }
 
 /* Ajuste para telas maiores que 1200px */
 @media (min-width: 1200px) {
     .gallery ul {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 colunas */
     }
 }
 
 /* Ajuste para telas entre 1199px e 700px */
 @media (min-width: 700px) and (max-width: 1199px) {
     .gallery ul {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas */
     }
 }
 
 /* Ajuste para telas menores que 700px */
 @media (max-width: 700px) {
     .gallery ul {
-        grid-template-columns: repeat(1, 1fr); /* 1 coluna */
+        grid-template-columns: repeat(1, 1fr);
+        /* 1 coluna */
     }
 }
